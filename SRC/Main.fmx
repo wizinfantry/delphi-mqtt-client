@@ -1,0 +1,325 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 593
+  ClientWidth = 547
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object grdpnlyt1: TGridPanelLayout
+    Align = Top
+    Size.Width = 547.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    ColumnCollection = <
+      item
+        Value = 33.333336220113880000
+      end
+      item
+        Value = 33.333333739360130000
+      end
+      item
+        Value = 33.333330040525990000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = btnConnect
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = btnDisConnect
+        Row = 0
+      end
+      item
+        Column = 2
+        Control = btnPiing
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object btnConnect: TButton
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 172.333343505859400000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Connect'
+      OnClick = btnConnectClick
+    end
+    object btnDisConnect: TButton
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 172.333343505859400000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'DisConnect'
+      OnClick = btnDisConnectClick
+    end
+    object btnPiing: TButton
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 172.333312988281200000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Ping'
+      OnClick = btnPiingClick
+    end
+  end
+  object grdpnlyt2: TGridPanelLayout
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 547.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    ColumnCollection = <
+      item
+        Value = 50.000489766561920000
+      end
+      item
+        Value = 49.999510233438090000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = edtIp
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = edtPort
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object edtIp: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 0
+      Text = '127.0.0.1'
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 263.502685546875000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edtPort: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = '1883'
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 263.497314453125000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object grdpnlyt3: TGridPanelLayout
+    Align = Top
+    Position.Y = 150.000000000000000000
+    Size.Width = 547.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    ColumnCollection = <
+      item
+        Value = 28.571429330842960000
+      end
+      item
+        Value = 71.428570669157040000
+      end>
+    ControlCollection = <
+      item
+        Column = 1
+        Control = edtMessage
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = btnPublish
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object edtMessage: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 0
+      Text = 'Hello World!!!!'
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 380.714294433593700000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btnPublish: TButton
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 146.285720825195300000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Publish'
+      OnClick = btnPublishClick
+    end
+  end
+  object grdpnlyt4: TGridPanelLayout
+    Align = Top
+    Position.Y = 200.000000000000000000
+    Size.Width = 547.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    ColumnCollection = <
+      item
+        Value = 28.571429330842960000
+      end
+      item
+        Value = 71.428570669157040000
+      end>
+    ControlCollection = <
+      item
+        Column = 1
+        Control = edtSubTopic
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = btnSubscribe
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object edtSubTopic: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = '/dev/test'
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 380.714294433593700000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btnSubscribe: TButton
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 146.285720825195300000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Subscribe'
+      OnClick = btnSubscribeClick
+    end
+  end
+  object grdpnlyt5: TGridPanelLayout
+    Align = Top
+    Position.Y = 100.000000000000000000
+    Size.Width = 547.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    ColumnCollection = <
+      item
+        Value = 28.571429330842960000
+      end
+      item
+        Value = 71.428570669157040000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = edtTopic
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object edtTopic: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = '/dev/test'
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 146.285720825195300000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object mmoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 547.000000000000000000
+    Size.Height = 343.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Viewport.Width = 543.000000000000000000
+    Viewport.Height = 339.000000000000000000
+  end
+  object tmr1: TTimer
+    Interval = 10000
+    OnTimer = tmr1Timer
+    Left = 56
+    Top = 320
+  end
+end
