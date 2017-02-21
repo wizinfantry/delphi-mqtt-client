@@ -122,6 +122,7 @@ end;
 
 procedure TForm1.tmr1Timer(Sender: TObject);
 begin
+  if (Assigned(MQTTClient)) then
   if MQTTClient.isConnected then MQTTClient.PingReq;
 end;
 
