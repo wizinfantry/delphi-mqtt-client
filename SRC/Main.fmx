@@ -79,7 +79,7 @@ object Form1: TForm1
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
       Margins.Bottom = 5.000000000000000000
-      Size.Width = 172.333312988281300000
+      Size.Width = 172.333312988281200000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -123,7 +123,7 @@ object Form1: TForm1
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Client
       TabOrder = 0
-      Text = '121.169.189.101'
+      Text = '127.0.0.1'
       Margins.Left = 5.000000000000000000
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
@@ -136,7 +136,7 @@ object Form1: TForm1
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Client
       TabOrder = 1
-      Text = '9955'
+      Text = '1883'
       Margins.Left = 5.000000000000000000
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
@@ -187,7 +187,7 @@ object Form1: TForm1
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
       Margins.Bottom = 5.000000000000000000
-      Size.Width = 380.714294433593800000
+      Size.Width = 380.714294433593700000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
     end
@@ -246,7 +246,7 @@ object Form1: TForm1
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
       Margins.Bottom = 5.000000000000000000
-      Size.Width = 380.714294433593800000
+      Size.Width = 380.714294433593700000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
     end
