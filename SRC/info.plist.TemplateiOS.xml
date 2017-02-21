@@ -3,6 +3,7 @@
 <plist version="1.0">
 <dict>
 <%VersionInfoPListKeys%>
+    <key>UIApplicationExitsOnSuspend</key><true/>
 <%ExtraInfoPListKeys%>
 </dict>
 </plist>

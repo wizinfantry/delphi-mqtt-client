@@ -13,7 +13,7 @@
     <ItemGroup Condition="'$(Platform)'=='Win64'"/>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice32'"/>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
-        <DeployFile Include="Win32\Debug\TEST001.exe" Condition="'$(Config)'=='Debug'">
+        <DeployFile Include="..\BIN\TEST001.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>TEST001\</RemoteDir>
             <RemoteName>TEST001.exe</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
@@ -38,15 +38,6 @@
             <RemoteDir>TEST001.app\Contents\MacOS\</RemoteDir>
             <RemoteName>libcgsqlite3.dylib</RemoteName>
             <DeployClass>DependencyModule</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX32\Debug\TEST001.rsm" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>TEST001.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>TEST001.rsm</RemoteName>
-            <DeployClass>DebugSymbols</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>

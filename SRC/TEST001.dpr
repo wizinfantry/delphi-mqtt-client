@@ -5,6 +5,7 @@ uses
   FMX.Forms,
   Main in 'Main.pas' {Form1},
   MQTT in '..\LIB\MQTT.pas',
+  MQTTHeaders in '..\LIB\MQTTHeaders.pas',
   MQTTReadThread in '..\LIB\MQTTReadThread.pas';
 
 {$R *.res}

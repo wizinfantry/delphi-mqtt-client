@@ -37,18 +37,18 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure Log(strMsg: string);
+    procedure Log(strMsg: UTF8String);
     procedure OnConnAck(Sender: TObject; ReturnCode: Integer);
     procedure OnPingResp(Sender: TObject);
-    procedure OnSubAck(Sender: TObject; MessageID: integer; GrantedQoS: integer);
+    procedure OnSubAck(Sender: TObject; MessageID: integer; GrantedQoS: Array of integer);
     procedure OnUnSubAck(Sender: TObject);
-    procedure OnPublish(Sender: TObject; topic, payload: String);
+    procedure OnPublish(Sender: TObject; topic, payload: UTF8String);
 
   end;
 
 var
   Form1: TForm1;
-  MQTTClient: TMQTTClient;
+  MQTTClient: TMQTT;
   fRL: TBytes;
 
 implementation
@@ -57,7 +57,7 @@ implementation
 
 procedure TForm1.btnConnectClick(Sender: TObject);
 begin
-  MQTTClient := TMQTTClient.Create(edtIp.Text, StrToInt(edtPort.Text));
+  MQTTClient := TMQTT.Create(edtIp.Text, StrToInt(edtPort.Text));
   MQTTClient.OnConnAck := OnConnAck;
   MQTTClient.OnPingResp := OnPingResp;
   MQTTClient.OnPublish := OnPublish;
@@ -71,6 +71,7 @@ begin
   if (Assigned(MQTTClient)) then
   begin
     MQTTClient.Disconnect;
+    MQTTClient.Free;
   end;
 end;
 
@@ -86,10 +87,10 @@ end;
 
 procedure TForm1.btnSubscribeClick(Sender: TObject);
 begin
-  MQTTClient.Subscribe(edtSubTopic.Text);
+  MQTTClient.Subscribe(edtSubTopic.Text, 0);
 end;
 
-procedure TForm1.Log(strMsg: string);
+procedure TForm1.Log(strMsg: UTF8String);
 begin
   mmoLog.Lines.Add(FormatDateTime('hh:mm:ss', Now) + ' = ' + strMsg);
   mmoLog.ScrollBy(0, mmoLog.Lines.Count);
@@ -105,12 +106,12 @@ begin
   Log('PING! PONG!');
 end;
 
-procedure TForm1.OnPublish(Sender: TObject; topic, payload: String);
+procedure TForm1.OnPublish(Sender: TObject; topic, payload: UTF8String);
 begin
   Log('Publish Received. Topic: '+ topic + ' Payload: ' + payload);
 end;
 
-procedure TForm1.OnSubAck(Sender: TObject; MessageID: integer; GrantedQoS: integer);
+procedure TForm1.OnSubAck(Sender: TObject; MessageID: integer; GrantedQoS: Array of integer);
 begin
   Log('Sub Ack Received');
 end;
@@ -122,8 +123,10 @@ end;
 
 procedure TForm1.tmr1Timer(Sender: TObject);
 begin
+  (*)
   if (Assigned(MQTTClient)) then
   if MQTTClient.isConnected then MQTTClient.PingReq;
+  (*)
 end;
 
 end.
