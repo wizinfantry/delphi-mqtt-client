@@ -38,7 +38,12 @@ uses
   //
   IdTCPClient, IdGlobal,
   //==============================================================================
-  SysUtils, Classes, blcksock, MQTTReadThread;
+  SysUtils, Classes,
+  //==============================================================================
+  // HammerOh
+  // blcksock,
+  //==============================================================================
+  MQTTReadThread;
 
 type
   //  Message type. 4 Bit unsigned.
