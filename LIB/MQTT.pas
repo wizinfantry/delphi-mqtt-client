@@ -529,6 +529,7 @@ function TMQTT.WriteData(AData: TBytes): boolean;
 var
   sentData: integer;
   attemptsToWrite: integer;
+  dataStream: TMemoryStream;
 begin
   Result := False;
   sentData := 0;
@@ -563,7 +564,11 @@ begin
     end;
     *)
     try
-      FSocket.IOHandler.Write(Pointer(Copy(AData, sentData - 1, Length(AData) + 1)), Length(AData) - sentData);
+      dataStream := TMemoryStream.Create;
+      dataStream.Position := 0;
+      dataStream.WriteBuffer(AData, Length(AData));
+      FSocket.IOHandler.Write(dataStream);
+      dataStream.Free;
       Result := True;
       FisConnected := true;
     except
